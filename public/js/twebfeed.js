@@ -8,7 +8,7 @@ function getTWFeed(url,tags) {
 		xmlhttp=new ActiveXObject('Microsoft.XMLHTTP');
 	}
 	// send request
-	xmlhttp.open('GET','twebfeed.php?url='+encodeURIComponent(url)+'&tags='+tags+'&t='+(new Date()).valueOf(),false);
+	xmlhttp.open('POST','twebfeed?url='+encodeURIComponent(url)+'&tags='+tags+'&t='+(new Date()).valueOf(),false);
 	xmlhttp.send();
 	txt = xmlhttp.responseText;
 	// process links

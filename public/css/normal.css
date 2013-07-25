@@ -1,7 +1,16 @@
-body { margin: 0px; background: #fff; /* TODO: make background gradient */ }
-p, td, li, pre, div, span { font-size: 12px; font-family: sans-serif; }
+/* http://colorschemedesigner.com/#0u11Tw0w0w0w0 */
+
+/* fonts */
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400);
+
+/* reset */
+body { margin: 0px; background: #555; }
+p, td, li, pre, div, span, pre { font-family: 'Source Sans Pro'; }
 input { color: #000 !important }
-/* make <pre> elements look font-wise like normal ones */ pre { font-family: sans-serif; }
+h1, h2, h3, h4, h5, h6, th { font-family: 'Roboto Slab'; }
+a { color: #ccc; }
+a:hover { color: #eee; }
 .hidden { display: none; }
 
 /* sidebar, navbar, bottombar */
@@ -11,7 +20,7 @@ input { color: #000 !important }
 	height: 100%;
 	background: #333;
 	border-right: 1px solid #000;
-	box-shadow: 2px 0px 8px #000;
+	box-shadow: 2px 0px 8px #222;
 	overflow: auto;
 	z-index: 2;
 }
@@ -34,10 +43,19 @@ input { color: #000 !important }
 	background: #383838;
 	padding-left: 20px;
 	width: 160px;
-	font-size: 12px;
+	font-size: 15px;
 	padding-top: 6px;
 	padding-bottom: 6px;
 	margin-bottom: 4px;
+	cursor: pointer;
+	-webkit-transition: color 0.1s;
+	-moz-transition: color 0.1s;
+	-ms-transition: color 0.1s;
+	-o-transition: color 0.1s;
+	transition: color 0.1s;
+}
+#navbar .navitem:hover, #bottombar .navitem:hover, #backbar li:hover {
+	color: #ff9640;
 }
 /* back button position override */ #backbar li { position: absolute; left: -20px; }
 #navbar .navitem a, #bottombar .navitem a, #backbar li a {
@@ -49,7 +67,7 @@ input { color: #000 !important }
 	background: #484848;
 	width: 170px;
 	padding-left: 10px;
-	font-size: 14px;
+	font-size: 18px;
 	padding-top: 12px;
 	padding-bottom: 12px;
 	margin-bottom: 8px;
@@ -62,7 +80,7 @@ input { color: #000 !important }
 	border-bottom-right-radius: 4px;
 }
 /* other stuff in sidebar */
-#signin *, #editfeeds *, #about * { color: #fff; }
+#signin *, #editfeeds *, #about * { color: #bbb; }
 #backbutton { padding-left: 20px; }
 /* edit feeds */
 
@@ -70,21 +88,20 @@ input { color: #000 !important }
 #maincontainer {
 	position: absolute;
 	left: 200px;
-	right: 0px;
+	max-width: 720px;
 	padding-top: 16px;
 	z-index: 1;
-	background: #fff;
 }
 #maintable {
-	position: absolute;
 	width: 100%;
-	background: #fff;
+	background: #555;
+	color: #ddd;
 	border-spacing: 0px;
 }
 /* table headers */
 #maintable > thead > tr > th {
-	text-align: right;
-	font-size: 16px;
+	text-align: left;
+	font-size: 24px;
 }
 /* right-align first column, left-align second column */
 #maintable > thead > tr > td:first-child, #maintable > tbody > tr > td:first-child {
@@ -109,14 +126,20 @@ input { color: #000 !important }
 }
 /* prettify */
 #maintable > tbody > tr, #maintable > tbody > tr > td:first-child {
-	-webkit-transition: background 0.2s linear;
-	-moz-transition: background 0.2s linear;
+	-webkit-transition: background 0.1s linear;
+	-moz-transition: background 0.1s linear;
 }
-#maintable > tbody > tr:hover {
-	background: #f4f4ff;
-}
+/*#maintable > tbody > tr:hover {
+	background: #666;
+}*/
 #maintable > tbody > tr > td:first-child:hover {
-	background: #d8d8ff;
+	background: #666;
+}
+/* fonts */
+#maintable td {
+	font-size: 16px;
+	line-height: 22px;
+	text-shadow: 0px 1px 0px #222;
 }
 
 /* fullfeedview: highlight new updates */
@@ -130,6 +153,10 @@ input { color: #000 !important }
 #fullfeedview {
 	padding-left: 16px;
 	padding-right: 16px;
+	color: #ddd;
+	font-size: 16px;
+	line-height: 22px;
+	text-shadow: 0px 1px 0px #222;
 }
 /* diffs */
 .diff-ins { background: #8f8 }

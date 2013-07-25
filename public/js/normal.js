@@ -5,7 +5,7 @@ showingfeed = false;
 
 function makeNavbar() {
 	var navbar = $('#navbar')[0];
-	navbar.innerHTML = '<li id="navtitle">TeacherWeb feed reader</li><li class="navitem" id="navhome"><a href="#">Home</a></li>';
+	navbar.innerHTML = '<li id="navtitle">TeacherWeb Reader</li><li class="navitem" id="navhome"><a href="#">Home</a></li>';
 	for (i=0;i<getNumOfFeeds();i++) {
 		feed = getFeed(i);
 		navbar.innerHTML += '<li class="navitem" onclick="showfullfeedview('+i+');void 0"><a href="#">'+feed.name+'</a></li>';

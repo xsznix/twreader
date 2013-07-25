@@ -2,23 +2,9 @@
 <html>
 <head>
 <title>TeacherWeb feed reader</title>
-<link rel="icon" type="image/png" href="favicon.png" />
-<link rel="apple-touch-icon" href="apple-touch-icon.png" />
-<link type="text/css" rel="stylesheet" href="normal.css" />
-<script type="text/javascript"
- src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-<script type="text/javascript" src="jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="jquery.color.js"></script>
-<script type="text/javascript" src="diff_match_patch.js"></script>
-<script type="text/javascript" src="twebfeed.js"></script>
-<script type="text/javascript" src="database.js"></script>
-<script type="text/javascript" src="compression.js"></script>
-<script type="text/javascript" src="update.js"></script>
-<script type="text/javascript" src="sidebar.js"></script>
-<script type="text/javascript" src="fullfeedview.js"></script>
-<script type="text/javascript" src="editfeeds.js"></script>
-<script type="text/javascript" src="events.js"></script>
-<script type="text/javascript" src="normal.js"></script>
+<link rel="icon" type="image/png" href="/public/img/favicon.png" />
+<link rel="apple-touch-icon" href="/public/img/apple-touch-icon.png" />
+<link type="text/css" rel="stylesheet" href="/public/css/normal.css" />
 </head>
 <body>
 <!-- sidebar -->
@@ -26,7 +12,6 @@
 	<ul id="navbar">
 	</ul>
 	<ul id="bottombar">
-		<li class="navitem" id="showsignin"><a href="#">Sign In/Sign Up</a></li>
 		<li class="navitem" id="showeditfeeds"><a href="#">Add/Edit Feeds</a></li>
 		<li class="navitem" id="showabout"><a href="#">About</a></li>
 	</ul>
@@ -35,13 +20,6 @@
 	</ul>
 	
 	<!-- hidden sections -->
-	<div class="hidden" id="signin">
-		<h2>Sign In</h2>
-		<p>Not implemented</p>
-		<h2>Sign Up</h2>
-		<p>Not implemented</p>
-		<div style="height: 64px">&nbsp;</div>
-	</div>
 	<div class="hidden" id="editfeeds"></div>
 	<div class="hidden" id="about">
 		<h2>About this webpage</h2>
@@ -162,6 +140,7 @@
 		<!-- head -->
 		<thead>
 			<tr>
+				<th></th>
 				<th>Updates</th>
 			</tr>
 			<tr>
@@ -183,6 +162,20 @@
 	</table>
 	<div class="hidden" id="fullfeedview"></div>
 </div>
-<div class="hidden" id="busy"><img src="wait30trans.gif" /><p>Updating...</p></div>
+<div class="hidden" id="busy"><img src="/public/img/wait30trans.gif" /><p>Updating...</p></div>
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="/public/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="/public/js/jquery.color.js"></script>
+<script type="text/javascript" src="/public/js/diff_match_patch.js"></script>
+<script type="text/javascript" src="/public/js/twebfeed.js"></script>
+<script type="text/javascript" src="/public/js/database.js"></script>
+<script type="text/javascript" src="/public/js/compression.js"></script>
+<script type="text/javascript" src="/public/js/update.js"></script>
+<script type="text/javascript" src="/public/js/sidebar.js"></script>
+<script type="text/javascript" src="/public/js/fullfeedview.js"></script>
+<script type="text/javascript" src="/public/js/editfeeds.js"></script>
+<script type="text/javascript" src="/public/js/events.js"></script>
+<script type="text/javascript" src="/public/js/normal.js"></script>
 </body>
 </html>
