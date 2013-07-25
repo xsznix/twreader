@@ -1,5 +1,6 @@
 require 'bundler/setup'
 require 'net/http'
+require 'uri'
 Bundler.require(:default)
 
 use Rack::Static, :urls => ["/public"]
@@ -27,8 +28,10 @@ get "/" do
 end
 
 post "/twebfeed" do
+	puts params.inspect
 	# get the document
 	tags = params[:tags]
+	puts URI.parse(params[:url]).inspect
 	doc = Nokogiri::HTML Net::HTTP.get URI.parse params[:url]
 
 	# find the element

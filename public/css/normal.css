@@ -1,16 +1,16 @@
-/* http://colorschemedesigner.com/#0u11Tw0w0w0w0 */
+/* http://colorschemedesigner.com/#0u21Tw0w0w0w0 */
 
 /* fonts */
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400);
 
 /* reset */
-body { margin: 0px; background: #555; }
+body { margin: 0px; background: #f8f8f8; }
 p, td, li, pre, div, span, pre { font-family: 'Source Sans Pro'; }
 input { color: #000 !important }
 h1, h2, h3, h4, h5, h6, th { font-family: 'Roboto Slab'; }
-a { color: #ccc; }
-a:hover { color: #eee; }
+a { color: #1d7373; }
+a:hover { color: #099; }
 .hidden { display: none; }
 
 /* sidebar, navbar, bottombar */
@@ -94,8 +94,8 @@ a:hover { color: #eee; }
 }
 #maintable {
 	width: 100%;
-	background: #555;
-	color: #ddd;
+	background: #f8f8f8;
+	color: #444;
 	border-spacing: 0px;
 }
 /* table headers */
@@ -133,13 +133,12 @@ a:hover { color: #eee; }
 	background: #666;
 }*/
 #maintable > tbody > tr > td:first-child:hover {
-	background: #666;
+	background: #f0f0f0;
 }
 /* fonts */
 #maintable td {
 	font-size: 16px;
 	line-height: 22px;
-	text-shadow: 0px 1px 0px #222;
 }
 
 /* fullfeedview: highlight new updates */
@@ -153,10 +152,9 @@ a:hover { color: #eee; }
 #fullfeedview {
 	padding-left: 16px;
 	padding-right: 16px;
-	color: #ddd;
+	color: #444;
 	font-size: 16px;
 	line-height: 22px;
-	text-shadow: 0px 1px 0px #222;
 }
 /* diffs */
 .diff-ins { background: #8f8 }

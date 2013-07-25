@@ -43,8 +43,8 @@ function finfoupdate(ref) {
 	index = $(ref).parent().attr('id').substr(1);
 	setFeed(
 		index, // index of the feed
-		$($(ref).siblings('.fname')[0]).attr('value'), // name of the feed
-		$($(ref).siblings('.furl')[0]).attr('value')); // url of the feed
+		$(ref).siblings('.fname').eq(0).val(), // name of the feed
+		$(ref).siblings('.furl').eq(0).val()); // url of the feed
 	makeNavbar();
 	showMain();
 	prepareeditfeeds();
