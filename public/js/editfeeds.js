@@ -8,9 +8,9 @@ function prepareeditfeeds() {
 		feed = getFeed(i);
 		var item = '';
 		item += '<form id="f'+i+'"><h3>Feed '+i+'</h3>'; // e.g. Feed 0; index
-		item += '<p>Feed name:</p>'; // Feed name; label
+		item += '<span>Title:</span>'; // Feed name; label
 		item += '<input type="text" class="fname" size="35" value="'+feed.name+'" /><br />';
-		item += '<p>Feed URL:</p>'; // Feed URL; label
+		item += '<span>URL:</span>'; // Feed URL; label
 		item += '<input type="text" class="furl" size="35" value="'+feed.url+'" /><br />';
 		item += '<input type="button" value="Delete" onclick="finfodelete('+i+')" />'; // Delete the feed
 		item += '<input type="button" value="Update" onclick="finfoupdate(this)" />'; // Update the feed

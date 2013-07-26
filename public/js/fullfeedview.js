@@ -1,11 +1,11 @@
 // fullfeedview.js - contains functions needed for the full feed view
 
 function showfullfeedview(index) {
-	$('#fullfeedview').stop().fadeOut(500,function(){
-		$('#maintable').stop().fadeOut(500,function(){
+	$('#fullfeedview').stop().fadeOut(200,function(){
+		$('#maintable').stop().fadeOut(200,function(){
 			feed = getFeed(index);
 			$('#fullfeedview')[0].innerHTML = '<h2>'+feed.name+' (<a href="'+feed.url+'" target="_blank">original</a>)</h2>'+feed.content;
-			$('#fullfeedview').fadeIn(500);
+			$('#fullfeedview').fadeIn(300);
 			setTimeout(updfullfeedview, 500, index, feed);
 		});
 	});
@@ -53,8 +53,8 @@ function _difffullfeedview(index, feed) {
 // ^^^ does not work
 
 function hidefullfeedview() {
-	$('#maintable').stop().fadeOut(500,function(){
-		$('#fullfeedview').stop().fadeOut(500,function(){$('#maintable').fadeIn(500)})
+	$('#maintable').stop().fadeOut(200,function(){
+		$('#fullfeedview').stop().fadeOut(200,function(){$('#maintable').fadeIn(300)})
 	});
 }
 

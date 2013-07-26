@@ -16,7 +16,7 @@ function _setEvents() {
 	$('#showsignin').click(function(){
 		showingsignin = true;
 		widensidebar(function(){
-			$('#signin').stop().fadeIn(500);
+			$('#signin').stop().fadeIn(300);
 		});
 	});
 	// show edit feeds animation
@@ -24,14 +24,14 @@ function _setEvents() {
 		showingeditfeeds = true;
 		prepareeditfeeds();
 		widensidebar(function(){
-			$('#editfeeds').stop().fadeIn(500);
+			$('#editfeeds').stop().fadeIn(300);
 		});
 	});
 	// show about animation
 	$('#showabout').click(function(){
 		showingabout = true;
 		widensidebar(function(){
-			$('#about').stop().fadeIn(500);
+			$('#about').stop().fadeIn(300);
 		});
 	});
 	// hide fullfeedview animation
@@ -50,15 +50,15 @@ function _setEvents() {
 		$(this).mouseleave();
 		if (showingsignin) {
 			showingsignin = false;
-			$('#signin').fadeOut(500);
+			$('#signin').fadeOut(200);
 			unwidensidebar();
 		} else if (showingeditfeeds) {
 			showingeditfeeds = false;
-			$('#editfeeds').fadeOut(500);
+			$('#editfeeds').fadeOut(200);
 			unwidensidebar();
 		} else if (showingabout) {
 			showingabout = false;
-			$('#about').fadeOut(500);
+			$('#about').fadeOut(200);
 			unwidensidebar();
 		}
 	});
