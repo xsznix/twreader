@@ -29,9 +29,9 @@ function createeditfeedentry() {
 	i = getNumOfFeeds();
 	var item = '';
 	item += '<h3>Feed '+i+'</h3>'; // e.g. Feed 0; index
-	item += '<p>Feed name:</p>'; // Feed name; label
+	item += '<span>Title:</span>'; // Feed name; label
 	item += '<input type="text" class="fname" size="35" value="" /><br />';
-	item += '<p>Feed URL:</p>'; // Feed URL; label
+	item += '<span>URL:</span>'; // Feed URL; label
 	item += '<input type="text" class="furl" size="35" value="" /><br />';
 	item += '<input type="button" value="Cancel" onclick="prepareeditfeeds()" />'; // Delete the feed
 	item += '<input type="button" value="Update" onclick="finfoupdate(this)" /></form>'; // Update the feed

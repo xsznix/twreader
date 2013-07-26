@@ -83,6 +83,7 @@ a:hover { color: #099; }
 #signin *, #editfeeds *, #about * { color: #bbb; }
 #backbutton { padding-left: 20px; }
 /* edit feeds */
+#editfeeds h3 { margin: 0 0 2px 0; }
 #editfeeds hr { border: 1px solid #666; }
 #editfeeds form span {
 	width: 36px;
