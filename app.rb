@@ -35,16 +35,16 @@ post "/twebfeed" do
 	# find the element
 	content = ""
 	doc.css('div#mainContent').each { |elem|
-		content = elem.to_s
+		content = elem.to_s.gsub /font-(?:family|size):[\w\s\d,'-]*([;"])/i, '\1'
 	}
 	if content.empty? then
 		doc.css('div.apt').each { |elem|
-			content = elem.to_s
+			content = elem.to_s.gsub /font-(?:family|size):[\w\s\d,'-]*([;"])/i, '\1'
 		}
 	end
 	if content.empty? then
 		doc.css('pre.owner').each { |elem|
-			content = elem.to_s.gsub /<br( \/)?>/, "\n"
+			content = elem.to_s.gsub /<br( \/)?>/i, "\n"
 		}
 	end
 
